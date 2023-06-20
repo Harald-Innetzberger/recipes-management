@@ -4,30 +4,65 @@
   "info": {
     "singularName": "recipe",
     "pluralName": "recipes",
-    "displayName": "Recipe"
+    "displayName": "Recipe",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "Titel": {
       "type": "richtext",
       "required": true,
       "minLength": 3,
       "maxLength": 20
     },
-    "description": {
+    "Zubereitung": {
       "type": "richtext",
       "required": true
     },
-    "images": {
+    "Bilder": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
+      ]
+    },
+    "Portionen": {
+      "type": "enumeration",
+      "enum": [
+        "Eine",
+        "Zwei",
+        "Drei",
+        "Vier"
       ],
-      "type": "media",
-      "multiple": true
+      "default": "Zwei",
+      "required": true
+    },
+    "Kochzeit": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "Bemerkungen": {
+      "type": "richtext"
+    },
+    "Kategorie": {
+      "type": "enumeration",
+      "enum": [
+        "Fleischgerichte"
+      ],
+      "required": true,
+      "default": "Fleischgerichte"
+    },
+    "Zutat": {
+      "displayName": "Einheit",
+      "type": "component",
+      "repeatable": true,
+      "component": "einheit.einheit"
     }
   }
 }

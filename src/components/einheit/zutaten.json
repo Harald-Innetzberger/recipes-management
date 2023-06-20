@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_zutaten_zutatens",
+  "info": {
+    "displayName": "Einheit",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "g": {
+      "type": "integer",
+      "required": true
+    },
+    "ml": {
+      "type": "integer"
+    }
+  }
+}

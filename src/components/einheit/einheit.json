@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_einheit_einheits",
+  "info": {
+    "displayName": "Einheit",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Menge": {
+      "type": "decimal"
+    },
+    "Einheit": {
+      "type": "enumeration",
+      "enum": [
+        "Gramm",
+        "Milliliter"
+      ],
+      "default": "Gramm",
+      "required": true
+    },
+    "Zutat": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    }
+  }
+}
